@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/" reloadable="true">
+    <Resource
+        name="jdbc/dsh2"
+        auth="Container"
+        type="javax.sql.DataSource"
+        driverClassName="org.h2.Driver"
+        url="jdbc:h2:tcp://localhost/~/example"
+        username="sa"
+        password=""
+    />
+    <Resource
+        name="jdbc/dsmysql"
+        auth="Container"
+        type="javax.sql.DataSource"
+        username="root"
+        password="123456"
+        driverClassName="com.mysql.jdbc.Driver"
+        url="jdbc:mysql://localhost:3306/test?useUnicode=true&amp;characterEncoding=utf8"
+        maxTotal="25"
+        maxIdle="10"
+        defaultTransactionIsolation="READ_COMMITTED"
+        validationQuery="Select 1"
+    />
+</Context>
