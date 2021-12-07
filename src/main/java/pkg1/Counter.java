@@ -36,6 +36,7 @@ public class Counter extends HttpServlet {
         cookie.setMaxAge(60*60*24);
         response.addCookie(cookie);
 
+        out.println(count);
         Page.footer(out);
     }
 }
